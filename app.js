@@ -137,3 +137,36 @@ const itemexist = products.filter((item)=> {
 })
 
 //شی گرایی
+
+function product (title, price) {
+    this.title = title
+    this.price = price
+
+    this.productInfo = function () {
+        return 'title: ${this.title} - price: ${this.price}'
+    }
+}
+
+const product1 = new product('book1', 99)
+const product2 = new product('book2', 89)
+
+console.log(product1.productInfo)
+console.log(product2.productInfo)
+
+class Product {
+    constructor(title, price) {
+        this.title = title
+        this.price = price
+    }
+
+    productInfo () {
+        return 'title: ${this.title} - price: ${this.price}'
+    }
+}
+
+const product3 = new product('book1', 99)
+const product4 = new product('book2', 89)
+
+console.log(product1.productInfo)
+console.log(product2.productInfo)
+
